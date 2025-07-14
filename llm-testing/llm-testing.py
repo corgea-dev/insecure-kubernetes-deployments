@@ -7,7 +7,7 @@ from llm_guard.vault import Vault
 vault = Vault()
 input_scanners = [Anonymize(vault), Toxicity(), TokenLimit(), PromptInjection()]
 output_scanners = [Deanonymize(vault), NoRefusal(), Relevance(), Sensitive()]
-
+print("this is a test")
 def query(payload, model_id, api_token):
     headers = {"Authorization": f"Bearer {api_token}"}
     API_URL = f"https://api-inference.huggingface.co/models/{model_id}"
