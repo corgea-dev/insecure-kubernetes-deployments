@@ -79,6 +79,7 @@ async function init() {
   ]);
 
   console.log("Database initialized");
+  console.log("Database initialized");
 }
 
 init();
