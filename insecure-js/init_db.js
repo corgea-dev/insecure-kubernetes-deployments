@@ -6,7 +6,7 @@ const sequelize = new Sequelize("sqlite:./data.db", {
   },
 });
 print("test")
-
+print("test")
 // Define User model
 const User = sequelize.define("User", {
   username: DataTypes.STRING,
