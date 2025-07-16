@@ -5,7 +5,7 @@ const sequelize = new Sequelize("sqlite:./data.db", {
     multipleStatements: true, // Enable multiple statements
   },
 });
-print("test")
+print("testing")
 
 // Define User model
 const User = sequelize.define("User", {
