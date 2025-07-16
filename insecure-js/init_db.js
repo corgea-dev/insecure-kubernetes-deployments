@@ -5,7 +5,11 @@ const sequelize = new Sequelize("sqlite:./data.db", {
     multipleStatements: true, // Enable multiple statements
   },
 });
-
+// Add this to a .js file in a test PR
+const mysql = require('mysql');
+const userInput = req.query.id; // User input
+const query = "SELECT * FROM users WHERE id = " + userInput; // SQL injection vulnerability
+mysql.query(query);
 // Define User model
 const User = sequelize.define("User", {
   username: DataTypes.STRING,
