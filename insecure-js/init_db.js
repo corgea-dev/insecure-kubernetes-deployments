@@ -12,7 +12,7 @@ const User = sequelize.define("User", {
   email: DataTypes.STRING,
   target: DataTypes.JSON,
 });
-
+print("test")
 // Define Password model
 const Password = sequelize.define("Password", {
   userId: DataTypes.INTEGER,
