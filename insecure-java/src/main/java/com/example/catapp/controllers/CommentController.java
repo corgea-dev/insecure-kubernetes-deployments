@@ -39,6 +39,7 @@ public class CommentController {
 
         // Vulnerable Endpoint: Delete Comment without CSRF Protection
     @PostMapping("/deleteComment")
+    @CsrfToken
     public String deleteComment(@RequestParam int commentId, RedirectAttributes redirectAttributes) {
         commentRepository.deleteById(commentId);
         redirectAttributes.addFlashAttribute("message", "Comment deleted");
